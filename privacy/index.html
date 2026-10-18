@@ -18,7 +18,7 @@
 <body>
 <main>
   <h1>Aesa Agent Privacy Policy</h1>
-  <p class="meta">Blackbox Intelligence Group LLC · Effective 17 October 2026</p>
+  <p class="meta">Blackbox Intelligence Group LLC · Effective 18 October 2026</p>
 
   <p>Aesa Agent is a native Android client. It does not run a local model and it has no developer backend. You bring your own provider: sign in or paste an API key, or point the app at an OpenAI-compatible URL you control. Chat content goes only to the AI provider you connect. Blackbox Intelligence Group LLC does not receive it. There is no analytics SDK and no ads.</p>
 
@@ -32,8 +32,16 @@
     <li>An optional Brave Search API key, if you save one</li>
     <li>Phone Access grants and a local audit of recent phone-tool executions</li>
     <li>Flags on assistant messages (Play AI-generated content policy)</li>
+    <li>Monthly spending totals</li>
+    <li>A privacy request log</li>
   </ul>
-  <p>API keys are stored in EncryptedSharedPreferences backed by Android Keystore. You can delete chats, keys, notes, grants, and settings in the app under Settings, Delete all local data.</p>
+  <p>API keys are stored in EncryptedSharedPreferences backed by Android Keystore. You can delete chats, keys, notes, grants, settings, the request log, and spending totals in the app under Settings, Delete all local data.</p>
+
+  <h2>Spending and the request log</h2>
+  <p>Spending totals and a privacy request log are kept only on the phone. Blackbox Intelligence Group LLC does not receive them. In Settings, Spending and budgets shows the monthly totals. Privacy ledger is the request log.</p>
+  <p>The log records the time, provider, host, model, what was attached, tokens, and estimated cost for each chat, image, and search call. It records the kind of attachment, such as a photo, file, or location, and not the photo or file itself. API keys are never stored in the log. Sign-in calls are not logged. Only the newest 2,000 rows are kept.</p>
+  <p>"Save request text" is off by default. When you turn it on, the text sent to the provider is saved in the log, with keys stripped.</p>
+  <p>You can export the log to a file you choose, or clear it. Clearing the log does not reset monthly spend. Delete all local data removes the log and the spending totals along with the other data stored on the phone.</p>
 
   <h2>Data you send to third parties</h2>
   <p>When you send a message, the app transmits conversation text (and attached photos or files, if you attach them) to the provider you enabled, for example OpenAI, Anthropic, xAI, DeepSeek, Moonshot/Kimi, OpenRouter, Google Gemini, or a host you type (Ollama, LM Studio, vLLM, llama.cpp). Image prompts go to the image API of the xAI or OpenAI-compatible account you connected. Those providers are third parties you choose. We do not interpose a proxy.</p>
