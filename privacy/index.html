@@ -23,7 +23,7 @@
   <p>Aesa Agent is a native Android client. It does not run a local model and it has no developer backend. You bring your own provider: sign in or paste an API key, or point the app at an OpenAI-compatible URL you control. Chat content goes only to the AI provider you connect. Blackbox Intelligence Group LLC does not receive it. There is no analytics SDK and no ads.</p>
 
   <h2>What we collect</h2>
-  <p>Blackbox Intelligence Group LLC does not collect, sell, or share your chats, keys, photos, or location. There is no analytics SDK, no crash SDK that uploads chats, no ads, and no required Aesa account.</p>
+  <p>Blackbox Intelligence Group LLC does not sell your data, and does not store your chats, keys, photos, or location on our servers. Photos you attach are sent from your phone to the AI provider you chose, as described below. There is no analytics SDK, no crash SDK that uploads chats, no ads, and no required Aesa account.</p>
   <p>Data that stays on the device:</p>
   <ul>
     <li>Conversation history</li>
@@ -57,7 +57,8 @@
   <p>Custom endpoints on your LAN (for example <code>http://192.168.x.x:11434/v1</code>) may use unencrypted HTTP. That is required for typical homelab Ollama. Prefer Tailscale or HTTPS when you can.</p>
 
   <h2>Permissions</h2>
-  <p>Used for app functionality, optional, not sold: Internet; Microphone (system speech recognizer); Camera (optional capture; Photo Picker is preferred); Location (one-shot, only when the location tool is confirmed).</p>
+  <p>Used for app functionality, optional, not sold: Internet and network state; Location, coarse and fine (one-shot, only when the location tool is confirmed); Storage write, on Android 9 and older only; Set alarm, so alarm and timer tools can open the Clock app after you confirm; and the app's own internal receiver permission, which no other app can use. The app does not request Microphone or Camera permission. Dictation uses your phone's speech app, and taking a photo uses your phone's camera app.</p>
+  <p>Photos: when you attach a photo, from the Photo Picker or your camera app, it is sent with your message to the AI provider you chose so that provider can answer. For app store data safety purposes this counts as photos collected and shared for app functionality. We do not receive or store your photos, and the provider's handling is governed by its own policy.</p>
   <p>The Google Play version does not request notification permission, a foreground service, or Notification Listener access, and it does not read notifications. A notification listener and a special-use foreground service (Phone Access status) exist only in a separately distributed sideload build. That sideload build can read active notifications only after you enable the system Notification Listener and confirm the tool.</p>
   <p>The Play flavor does not request SMS, call log, Accessibility, all-files, overlay intercept, install-unknown-apps, notification listener access, or a special-use foreground service.</p>
 
